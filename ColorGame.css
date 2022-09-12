@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+    margin : 0;
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    background-color: None ;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color:darkcyan ;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all .5s;
+}
+button:hover{
+    color: aliceblue;
+    background-color: darkcyan;
+    display: inline-block;
+    outline: none;
+}
+h1{
+    text-size-adjust: 100px;
+    color: aliceblue;
+    text-decoration: wavy;
+    padding: 20px 0;
+}
+.square{
+    width: 30%;
+    background-color: white;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 15%;
+    transition:background 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#message{
+    display: inline-block;
+}
+
+.plane-bar{
+    background-color: rgb(229, 228, 228);
+    text-align: center;
+    text-decoration: solid;
+    padding-top: 0.5%;
+    padding-bottom: 1%;
+}
+.NavBar{
+    background-color: darkcyan;
+    padding-bottom: 1%;
+    text-align: center;
+   
+    color:aliceblue;
+    
+}
+.containerss{
+    background-color: black;
+    margin: auto;
+    margin-top: 5%;;
+    max-width: 600px;
+}
