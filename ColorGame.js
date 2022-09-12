@@ -12,6 +12,14 @@ var message = document.getElementById("message");
 var easy_btn = document.querySelector("#Easy-btn");
 var hard_btn = document.querySelector("#Hard-btn");
 
+//For Theme button
+var themeMode = document.getElementById("Mode");
+var themeModeText = document.getElementById("modetext");
+var themebool = false;
+var body = document.querySelector("#body-m");
+var plan_bar = document.querySelector("#plan-bar-m");
+var icons = document.querySelector("#icons");
+
 
 
 
@@ -40,6 +48,7 @@ for(var i=0;i<squares.length;i++){
         var clickedcolor = this.style.backgroundColor;
         if (clickedcolor === PickedColor){
             message.textContent = "Correct";
+            
             changeColors(clickedcolor);
             NavBar.style.backgroundColor = clickedcolor;
             NewGame.textContent ="PlayAgain?"
@@ -47,6 +56,9 @@ for(var i=0;i<squares.length;i++){
         else{
             this.style.backgroundColor = "grey";
             message.textContent = "Try Again";
+            
+            
+            
         }
         
         
@@ -83,6 +95,37 @@ hard_btn.addEventListener("click",function(){
             squares[i].style.backgroundColor = colors[i];
             squares[i].style.display = "block";
         }
+});
+themeMode.addEventListener("click",function(){
+    
+    if(themebool == false){
+        themeModeText.textContent = "Dark Mode";
+        themebool = true;
+        body.classList.remove("text-bg-dark");
+        plan_bar.classList.remove("text-bg-dark");
+        easy_btn.classList.remove("btn-outline-light");
+        easy_btn.classList.add("btn-outline-secondary");
+        hard_btn.classList.remove("btn-outline-light");
+        hard_btn.classList.add("btn-outline-secondary");
+        NewGame.classList.remove("btn-light");
+        NewGame.classList.add("btn-secondary");
+        themeMode.classList.remove("btn-light");
+        themeMode.classList.add("btn-secondary");
+        }
+    else{
+        themeModeText.textContent = "Light Mode";
+        themebool = false;
+        body.classList.add("text-bg-dark");
+        plan_bar.classList.add("text-bg-dark");
+        easy_btn.classList.add("btn-outline-light");
+        easy_btn.classList.remove("btn-outline-secondary");
+        hard_btn.classList.add("btn-outline-light");
+        hard_btn.classList.remove("btn-outline-secondary");
+        NewGame.classList.add("btn-light");
+        NewGame.classList.remove("btn-secondary");
+        themeMode.classList.add("btn-light");
+        themeMode.classList.remove("btn-secondary");
+    }
 });
 
 // 
